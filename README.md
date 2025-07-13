@@ -87,7 +87,7 @@ Project Z/
 #### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/zeesh.git
+git clone https://github.com/mirzaahsanali/zeesh.git
 cd zeesh
 ```
 
@@ -113,7 +113,7 @@ npm install
 
 ```bash
 cd api
-npm run develop
+npm start
 ```
 - The backend will run at [http://localhost:1337](http://localhost:1337) by default.
 - The Strapi admin panel will be available at [http://localhost:1337/admin](http://localhost:1337/admin).
