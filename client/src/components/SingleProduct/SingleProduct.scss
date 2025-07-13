@@ -1,0 +1,168 @@
+@import "../../css-config/mixins.scss";
+.single-product-main-content {
+    margin: 20px 0;
+    @include md {
+        margin: 75px 0;
+    }
+    .layout {
+        max-width: calc(100% - 20px);
+        margin: 0 auto;
+        @include md {
+            max-width: 1200px;
+        }
+        .single-product-page {
+            display: flex;
+            flex-direction: column;
+            @include md {
+                flex-direction: row;
+            }
+            .left {
+                width: 100%;
+                flex-shrink: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center ;
+                flex-shrink: 0;
+                @include md {
+                    width: 600px;
+                    height: 600px;
+                }
+                img {
+                    width: 100vw;
+                    display: block;
+                    @include md{
+                        width: 100%;
+                        display: block;
+                    }
+                }
+            }
+            .right {
+                display: flex;
+                flex-direction: column;
+                padding-top: 20px;
+                @include md {
+                    padding: 0 35px;
+                }
+                .name {
+                    font-size: 20px;
+                    line-height: 28px;
+                    margin-bottom: 20px;
+                    @include md {
+                        font-size: 24px;
+                        line-height: 32px;
+                    }
+                }
+                .price {
+                    color: rgb(255, 153, 90);
+                    font-size: 24px;
+                    line-height: 32px;
+                    margin-bottom: 20px;
+                }
+                .desc {
+                    font-size: 14px;
+                    line-height: 20px;
+                    margin-bottom: 20px;
+                    color: #6b6b6b;
+                    @include md {
+                        font-size: 16px;
+                        line-height: 24px;
+                        margin-bottom: 20px;
+                    }
+                }
+
+                .cart-buttons {
+                    display: flex;
+                    @include md {
+                        margin-top: 30px;
+                    }
+                    .quantity-buttons {
+                        width: fit-content;
+                        display: flex;
+                        border: 1px solid rgba(0, 0, 0, 0.1);
+                        height: 50px;
+                        margin-bottom: 8px;
+                        span {
+                            font-size: 14px;
+                            width: 30px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            cursor: pointer;
+                            color: #6b6b6b;
+                            &:nth-child(1) {
+                                font-size: 18px;
+                                border-right: 1px solid rgba(0, 0, 0, 0.1);
+                            }
+                            &:nth-child(2) {
+                                width: 40px;
+                            }
+                            &:nth-child(3) {
+                                font-size: 18px;
+                                border-left: 1px solid rgba(0, 0, 0, 0.1);
+                            }
+                        }
+                    }
+                    .add-to-cart-button {
+                        outline: 0;
+                        border: 0;
+                        height: 50px;
+                        width: 180px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                        font-size: 16px;
+                        color: white;
+                        background-color: rgb(255, 153, 90);
+                        flex-grow: 1;
+                        border: 2px solid  rgb(255, 153, 90);
+                        @include md {
+                            flex-grow: unset;
+                        }
+                        svg {
+                            margin-right: 10px;
+                        }
+                    }
+                    .add-to-cart-button:hover{
+                        color: #fff;
+                        background-color: rgb(255, 123, 41);
+                        border: 2px solid  rgb(255, 123, 41);
+                        transition: 0.1s ease-in;
+                    }
+                    .add-to-cart-button:active{
+                        background-color: #fff;
+                        color:  rgb(255, 153, 90);
+                        transition: 0s;
+                    }
+                }
+
+                .divider {
+                    margin: 20px 0;
+                }
+
+                .info-item {
+                    .text-bold {
+                        font-size: 18px;
+                        font-weight: 500;
+                        display: block;
+                        &:nth-child(1) {
+                            margin-bottom: 20px;
+                        }
+                        span {
+                            font-size: 16px;
+                            font-weight: 400;
+                            cursor: pointer;
+                            color: #6b6b6b;
+                        }
+                        svg {
+                            margin: 0 5px;
+                        }
+                        svg:hover{
+                            color: #212121;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

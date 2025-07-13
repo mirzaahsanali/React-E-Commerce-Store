@@ -1,0 +1,46 @@
+@import "../../css-config/mixins.scss";
+
+.main{
+    height: 100vh;
+    width: 100vw;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: loadingBg 4s ease forwards;
+    .content{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        animation: loading 2s ease forwards;
+        .img{
+            img{
+                width: 200px;
+                padding: 20px 0;
+                @include md{
+                    width: 300px;
+                }
+            }
+        }
+        .text{
+            font-size: 20px;
+            text-align: center;
+            color: #21212180;
+        }
+    }
+}
+
+@keyframes loading {
+    0%{
+        opacity: 0%;
+    }
+    70%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0%;
+    }
+}

@@ -1,0 +1,125 @@
+@import "../../../css-config/mixins.scss";
+
+.hero-banner{
+    padding: 40px 0;
+    position: relative;
+    background-image: linear-gradient(117deg, rgba(255,153,90,0.8) 0%, rgba(255,212,151,0.8) 67%, rgba(255,220,187,0.8) 100%), url("../../../assets/newsletter-bg.jpeg");
+    @include md{
+        height: fit-content;
+    }
+    .content{
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column-reverse;
+        max-width: calc(100% - 20px);
+        margin: 0 auto;
+        position: relative;
+        @include xxl{
+            height: 100vh;
+            flex-direction: row;
+            max-width: 1200px;
+        }
+        .banner-img{
+            animation: rotation 60s infinite linear;
+            position: relative;
+            z-index: 9;
+            width: 80%;
+            margin-bottom: 20px;
+            @include md{
+                width: 500px;
+                margin-right: 60px;
+                margin-top: 50px;
+                margin-bottom: 0;
+            }
+            @include xxl{
+                width: 625px;
+                margin-right: 0px;
+                margin-top: 0;
+            }
+            @keyframes rotation {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+        .text-content{
+            color: #fff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @include xxl{
+                position: absolute;
+                top: 50%;
+                left: 0px;
+                transform: translateY(-50%);
+            }
+            h1{
+                font-size: 50px;
+                font-weight: 700;
+                line-height: 1;
+                margin-bottom: 20px;
+                @include md{
+                    font-size: 80px;
+                }
+            }
+            h2{
+                color: rgb(255, 123, 41);
+                margin-bottom: 20px;
+            }
+            h1.v2{
+                font-size: 40px;
+                color: rgb(255, 123, 41);
+                margin-bottom: 20px;
+                @include lg{
+                    font-size: 62px;
+                }
+            }
+            p{
+                max-width: 300px;
+                font-size: 14px;
+                line-height: 20px;
+                margin-bottom: 20px;
+                @include md{
+                    max-width: 500px;
+                    font-size: 18px;
+                    line-height: 24px;
+                    margin-bottom: 40px;
+                }
+            }
+            .ctas{
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                .banner-cta{
+                    text-decoration: none;
+                    color: #fff;
+                    background-color: rgba(255, 123, 41, 0.2);
+                    text-transform: uppercase;
+                    font-size: 13px;
+                    font-weight: 900;
+                    // width: fit-content;
+                    border: 2px solid #fff;
+                    padding: 10px 20px;
+                    cursor: pointer;
+                }
+                .banner-cta:hover{
+                    background-color: rgb(255, 123, 41);
+                    color: #fff;
+                    border: 2px solid rgb(255, 123, 41);
+                    transition: 0.3s ease-in;
+                }
+                .banner-cta:active{
+                    background-color: #fff;
+                    color: rgb(255, 123, 41);
+                    transition: 0s;
+                }
+            }
+        }        
+    }
+}

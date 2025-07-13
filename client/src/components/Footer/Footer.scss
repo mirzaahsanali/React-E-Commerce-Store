@@ -1,0 +1,86 @@
+@import "../../css-config/mixins.scss";
+.footer {
+    width: 100%;
+    .footer-content {
+        padding: 50px 50px;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-start;
+        flex-flow: wrap;
+        gap: 20px;
+        @include md {
+            padding: 50px 200px;
+            justify-content: center;
+        }
+        .col {
+            max-width: 300px;
+            &:nth-child(3) {
+                width: 150px;
+                @include md {
+                    width: auto;
+                }
+            }
+            .title {
+                margin-bottom: 20px;
+                font-size: 20px;
+                
+            }
+            .text {
+                color: rgba(0, 0, 0, 0.5);
+                font-size: 14px;
+            }
+            .c-item {
+                display: flex;
+                margin-bottom: 10px;
+                svg {
+                    flex-shrink: 0;
+                    font-size: 14px;
+                    margin-right: 10px;
+                    margin-top: 4px;
+                    color: rgba(0, 0, 0, 0.5);
+                }
+            }
+            .app{
+                border: 1px solid black;
+                border-radius: 4px;
+                width: calc(100% - 100px);
+                @include md{
+                    width: 200px;
+                }
+            }
+            .payment{
+                width: calc(100% - 100px);
+                @include md{
+                    width: 200px;
+                }
+            }
+            p{
+                font-size: 12px;
+                color: rgba(0, 0, 0, 0.5);
+            }
+            span {
+                &.text {
+                    display: block;
+                    margin-bottom: 10px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .bottom-bar {
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        .bottom-bar-content {
+            height: auto;
+            background-color: #212121;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .text {
+                padding:0;
+                font-size: 12px;
+                color: #9d9d9d;
+            }
+        }
+    }
+}
