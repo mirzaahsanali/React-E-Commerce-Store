@@ -1,4 +1,4 @@
-# ZEESH
+# ZEESH - ReactJS E-Commerce Store
 
 Empowering Pakistani Women's Style. ZEESH is a modern e-commerce platform that celebrates the essence of Pakistani women through thoughtfully crafted clothing, merging tradition with contemporary fashion, and inspiring confidence and individuality.
 
